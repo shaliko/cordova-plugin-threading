@@ -23,6 +23,13 @@
     [self.commandDelegate runInBackground:^{
         NSString* payload = nil;
         // Some blocking logic...
+        for (int i = 1; i <= 1000000000; i++)
+        {
+            int r = arc4random_uniform(i);
+            if(i % 100000000 == 0) {
+                NSLog(@"%d", i);
+            }
+        }
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
         // The sendPluginResult method is thread-safe.
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
