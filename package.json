@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-echo",
+  "name": "Echo",
   "version": "0.0.1",
   "description": "Example of broken cordova plugin threading in ios 11",
   "cordova": {
